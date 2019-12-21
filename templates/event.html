@@ -16,10 +16,13 @@
 
   <div class="meta">
     {{ this.title }} on {{ this.event_date|dateformat('full') }} at {{ this.location }}
+    <br /><br />
+
+    <a href="{{ this.facebook_event }}">Facebook Event</a>
   </div>
 
   <div class="body">{{ this.body }}</div>
-  
+
   <div class="soundcloud">
     <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="{{ this.soundcloud }}"></iframe>
   </div>
