@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% from "macros/pagination.html" import render_pagination %}
+{% block title %}Events{% endblock %}
+{% block body %}
+  <h1>Events</h1>
+
+  <div class="events">
+    <ul>
+    {% for post in this.pagination.items %}
+      <li>
+        {% set image = post.attachments.images.first() %}
+        {% if image %}
+          <img src="{{ image.thumbnail(320)|url }}" alt="">
+        {% endif %}
+        <a href="{{ post|url }}">{{ post.title }}</a> —
+        {{ post.event_date|dateformat }}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+
+  {% if this.pagination.pages > 1 %}
+    {{ render_pagination(this.pagination) }}
+  {% endif %}
+{% endblock %}

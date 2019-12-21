@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }} | Events{% endblock %}
+{% block body %}
+  <h1>{{ this.title }}</h1>
+  {% set images = this.attachments.images.all() %}
+
+  {% if images %}
+   <div class="columns is-multiline is-tablet">
+    {% for image in images %}
+      <div class="column is-one-third">
+            <img src="{{ image.thumbnail(320)|url }}" alt="Photo of {{ this.title }}">
+      </div>
+     {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="meta">
+    {{ this.title }} on {{ this.event_date|dateformat('full') }} at {{ this.location }}
+  </div>
+
+  <div class="body">{{ this.body }}</div>
+  
+  <div class="soundcloud">
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="{{ this.soundcloud }}"></iframe>
+  </div>
+{% endblock %}
