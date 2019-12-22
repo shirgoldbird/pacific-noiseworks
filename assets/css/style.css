@@ -12,16 +12,29 @@ body {
 }
 
 header, footer, div.page {
-  width: 760px;
+  max-width: 760px;
   margin: 0 auto;
   background: #9965ffb8;
   padding: 20px 30px;
-  border: 20px solid white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', cursive;
+}
+
+h1 {
+  font-size: xxx-large;
+}
+
+h2 {
+  font-size: xx-large;
 }
 
 header {
   font-family: 'Bebas Neue', cursive;
-  border: 20px solid #9965ffd9;
+  outline: 3px solid black;
+  outline-offset: -3px;
+  margin-bottom: 2rem;
 }
 
 header h1 {
@@ -36,6 +49,8 @@ header h1 {
 .logo {
   max-height: 200px;
   vertical-align: middle;
+  display: block;
+  margin: auto;
 }
 
 a {
@@ -51,7 +66,8 @@ footer {
 }
 
 header nav {
-  display: inline;
+  display: block;
+  text-align: center;
 }
 
 header nav ul {
@@ -73,7 +89,8 @@ header a {
 }
 
 div.page {
-  background: white;
+  background: #fffaf3;
+  color: #403c3c;
 }
 
 .events ul {
