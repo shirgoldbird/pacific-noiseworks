@@ -3,7 +3,24 @@
 {% from "macros/pagination.html" import render_pagination %}
 {% block title %}Events{% endblock %}
 {% block body %}
-  <h1>Events</h1>
+<h1>Events</h1>
+  <h2>Upcoming Events</h2>
+
+  <div class="events">
+    <ul>
+      {% for child in this.pagination.items %}
+      {# if child.event_date >= site.Date.now() #}
+        <li>{{ render_event(child, from_index=true) }}</li>
+      {# endif #}
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% if this.pagination.pages > 1 %}
+    {{ render_pagination(this.pagination) }}
+  {% endif %}
+
+  <h2>Past Events</h2>
 
   <div class="events">
     <ul>
@@ -12,8 +29,4 @@
       {% endfor %}
     </ul>
   </div>
-
-  {% if this.pagination.pages > 1 %}
-    {{ render_pagination(this.pagination) }}
-  {% endif %}
 {% endblock %}
