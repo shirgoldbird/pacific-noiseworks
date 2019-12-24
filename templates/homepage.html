@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% from "macros/event.html" import render_event %}
+{% from "macros/pagination.html" import render_pagination %}
+{% block title %}Welcome!{% endblock %}
+
+{% block body %}
+
+<h1>{{ this.title }}</h1>
+{{ this.body }}
+
+{% set children = site.query('/events').include_hidden(true).all() %}
+{% if children %}
+<h2>Upcoming Events</h2>
+<div class="events">
+  <ul>
+    {% for child in children %}
+    <li>{{ render_event(child, from_index=true) }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endblock %}
