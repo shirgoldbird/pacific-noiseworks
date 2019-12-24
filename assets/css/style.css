@@ -18,8 +18,15 @@ header, footer, div.page {
   padding: 20px 30px;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bebas Neue', cursive;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -96,4 +103,18 @@ div.page {
 .events ul {
   list-style: none;
   padding-left: 0;
+}
+
+.meta {
+  font-size: smaller;
+  font-style: italic;
+}
+
+.copyright {
+  display: inline-block;
+}
+
+.social {
+  display: inline;
+  float: right;
 }
