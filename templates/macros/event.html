@@ -1,0 +1,41 @@
+{% macro render_event(post, from_index=false) %}
+  <div class="event">
+  {% if from_index %}
+
+    {% set image = post.attachments.images.first() %}
+    {% if image %}
+      <a href="{{ post|url }}"><img src="{{ image.thumbnail(320)|url }}" alt="Header image for {{ post.title }}"></a><br />
+    {% endif %}
+    <div class="event-info">
+      <a href="{{ post|url }}">{{ post.title }}</a> ({{ post.event_date|dateformat }})
+    </div>
+
+  {% else %}
+
+  <h1>{{ this.title }}</h1>
+  {% set images = this.attachments.images.all() %}
+
+  {% if images %}
+   <div class="columns is-multiline is-tablet">
+    {% for image in images %}
+      <div class="column is-one-third">
+            <img src="{{ image.thumbnail(320)|url }}" alt="Photo of {{ this.title }}">
+      </div>
+     {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="meta">
+    {{ this.title }} on {{ this.event_date|dateformat('full') }} at {{ this.location }}
+    <br /><br />
+
+    <a href="{{ this.facebook_event }}">Facebook Event</a>
+  </div>
+
+  <div class="body">{{ this.body }}</div>
+
+  <div class="soundcloud">
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="{{ this.soundcloud }}"></iframe>
+  </div>
+{% endif %}
+{% endmacro %}
