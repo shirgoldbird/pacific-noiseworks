@@ -8,25 +8,24 @@
 
   <div class="events">
     <ul>
-      {% for child in this.pagination.items %}
-      {# if child.event_date >= site.Date.now() #}
+    {% for child in this.children %}
+      {% if compare_dates(child.event_date, current_date()) %}
         <li>{{ render_event(child, from_index=true) }}</li>
-      {# endif #}
-      {% endfor %}
+      {% endif %}
+    {% endfor %}
     </ul>
   </div>
-
-  {% if this.pagination.pages > 1 %}
-    {{ render_pagination(this.pagination) }}
-  {% endif %}
 
   <h2>Past Events</h2>
 
   <div class="events">
     <ul>
-      {% for child in this.pagination.items %}
-      <li>{{ render_event(child, from_index=true) }}</li>
-      {% endfor %}
+    {% for child in this.children %}
+      {% if compare_dates(current_date(), child.event_date) %}
+        <li>{{ render_event(child, from_index=true) }}</li>
+      {% endif %}
+    {% endfor %}
     </ul>
   </div>
+
 {% endblock %}
