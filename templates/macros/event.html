@@ -16,10 +16,10 @@
   {% set images = post.attachments.images.all() %}
 
   {% if images %}
-  <div class="columns is-multiline is-tablet">
+  <div>
     {% for image in images %}
-      <div class="column is-one-third">
-            <img src="{{ image.thumbnail(320)|url }}" alt="Photo of {{ post.title }}">
+      <div>
+        <img src="{{ image.thumbnail(320)|url }}" alt="Photo of {{ post.title }}">
       </div>
      {% endfor %}
   </div>
