@@ -7,7 +7,12 @@
 <title>{% block title %}Welcome{% endblock %} — Pacific Noiseworks</title>
 <body>
   <header>
-    <a href="/"><img src="img/logo-tagline-white.png" alt="Pacific Noiseworks logo" class="logo"></a>
+    <a href="/">
+      {% if this._path == '/' %}
+      <img src="img/logo-tagline-white.png" alt="Pacific Noiseworks logo" class="logo"></a>
+      {% else %}
+      <img src="/img/logo-tagline-white.png" alt="Pacific Noiseworks logo" class="logo"></a>
+      {% endif %}
     <nav>
       <ul class="nav navbar-nav">
         <li{% if this._path == '/' %} class="active"{% endif
