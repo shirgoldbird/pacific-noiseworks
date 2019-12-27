@@ -1,2 +1,5 @@
 [project]
 name = pacific-noiseworks
+
+[servers.ghpages]
+target = ghpages://shirgoldbird/pacific-noiseworks
