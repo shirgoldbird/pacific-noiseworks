@@ -1,8 +1,8 @@
-title: WAV.FEST
+title: Not a WAV.FEST
 ---
 body: Check out this amazing event that we held in July. It was totally *righteous*.
 ---
-event_date: 2020-07-04
+event_date: 2018-07-04 16:00
 ---
 facebook_event: https://www.facebook.com/events/1731120616934290/
 ---
@@ -10,4 +10,6 @@ location: Substation
 ---
 soundcloud: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/544864383&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true
 ---
-twitter_handle: shirgoldbird
+price: $10
+---
+age_restriction: 18+

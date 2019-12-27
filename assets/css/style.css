@@ -118,3 +118,12 @@ div.page {
   display: inline;
   float: right;
 }
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+}

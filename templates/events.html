@@ -6,14 +6,12 @@
 <h1>Events</h1>
   <h2>Upcoming Events</h2>
 
-  <div class="events">
-    <ul>
+  <div class="events flex-grid">
     {% for child in this.children %}
-      {% if compare_dates(child.event_date, current_date()) %}
-        <li>{{ render_event(child, from_index=true) }}</li>
+      {% if compare_dates(child.event_date, current_datetime()) %}
+        <div class="col">{{ render_event(child, from_index=true) }}</div>
       {% endif %}
     {% endfor %}
-    </ul>
   </div>
 
   <h2>Past Events</h2>
@@ -21,8 +19,12 @@
   <div class="events">
     <ul>
     {% for child in this.children %}
-      {% if compare_dates(current_date(), child.event_date) %}
+      {% if compare_dates(current_datetime(), child.event_date) %}
         <li>{{ render_event(child, from_index=true) }}</li>
+        {% if loop.last and loop.index >= this.pagination.per_page %}
+          <br />
+          {{ render_pagination(this.pagination) }}
+        {% endif %}
       {% endif %}
     {% endfor %}
     </ul>

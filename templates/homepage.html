@@ -10,14 +10,14 @@
 {% set children = site.query('/events').include_hidden(true).all() %}
 {% if children %}
 <h2>Upcoming Events</h2>
-<div class="events">
-  <ul>
+<div class="events flex-grid">
     {% for child in children %}
-      {% if compare_dates(child.event_date, current_date()) %}
-        <li>{{ render_event(child, from_index=true) }}</li>
+      {% if compare_dates(child.event_date, current_datetime()) %}
+        <div class="col">
+          {{ render_event(child, from_index=true) }}
+        </div>
       {% endif %}
     {% endfor %}
-  </ul>
 </div>
 {% endif %}
 {% endblock %}
