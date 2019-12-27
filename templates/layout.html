@@ -8,11 +8,8 @@
 <body>
   <header>
     <a href="/">
-      {% if this._path == '/' %}
-      <img src="img/logo-tagline-white.png" alt="Pacific Noiseworks logo" class="logo"></a>
-      {% else %}
-      <img src="/img/logo-tagline-white.png" alt="Pacific Noiseworks logo" class="logo"></a>
-      {% endif %}
+      <img src="{{ '/img/logo-tagline-white.png'|url }}" alt="Pacific Noiseworks logo" class="logo">
+    </a>
     <nav>
       <ul class="nav navbar-nav">
         <li{% if this._path == '/' %} class="active"{% endif
