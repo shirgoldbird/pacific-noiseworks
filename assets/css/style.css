@@ -152,9 +152,14 @@ div.page {
   margin-bottom: 1em;
 }
 
+input {
+  border: #00BCD4 solid 1px;
+}
+
 #message {
   height: 100px;
   width: 300px;
+  max-width: 100%;
 }
 
 @media (max-width: 425px) {
@@ -168,19 +173,15 @@ div.page {
 
   .logo {
     max-height: 75px;
-    display: inline;
+    /* display: inline; */
   }
 
   header {
     padding: 10px;
   }
 
-  header nav {
-    display: inline;
-  }
-
   header nav ul li {
-    margin: 0;
-    font-size: 1rem;
+    margin: 0 auto;
+    font-size: .75em;
   }
 }
