@@ -135,11 +135,13 @@ div.page {
 
 .copyright {
   display: inline-block;
+  align-self: center;
 }
 
 .social {
   display: inline;
   float: right;
+  font-size: 1.5em;
 }
 
 .flex-grid {
