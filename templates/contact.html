@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <h1>{{ this.title }}</h1>
+  {{ this.body }}
+  <form action="mailto:you@yourdomainhere.com" method="post" enctype="text/plain">
+    <label for="name">Name</label>
+    <br />
+    <input type="text" name="name" id="name" onblur="validateName(name)" />
+    <br />
+    <label for="email">Email</label>
+    <br />
+    <input type="email" name="email" id="email" />
+    <br />
+    <label for="message">Message</label>
+    <br />
+    <input type="textfield" name="message" id="message" required />
+    <br />
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateName(x){
+    //  alert(document.getElementById(x).value);
+    }
+  </script>
+{% endblock %}
