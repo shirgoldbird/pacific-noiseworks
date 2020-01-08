@@ -3,3 +3,6 @@ name = pacific-noiseworks
 
 [servers.ghpages]
 target = ghpages://shirgoldbird/pacific-noiseworks
+
+[packages]
+lektor-markdown-excerpt = 0.1
