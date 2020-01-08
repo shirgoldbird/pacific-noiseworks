@@ -1,39 +1,74 @@
 <!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/07af19e0f4.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="shortcut icon" href="../img/favicon.icon" type="image/x-icon">
+    <title>About — Pacific Noiseworks</title>
+  </head>
 
-<title>About this Website — Pacific Noiseworks</title>
-<body>
-  <header>
-    <a href="/">
-      <img src="../img/logo-tagline-white.png" alt="Pacific Noiseworks logo" class="logo">
-    </a>
-    <nav>
-      <ul class="nav navbar-nav">
-        <li><a href="../">Welcome</a></li>
-        
-          <li><a href="../blog/">Blog</a></li>
-        
-          <li><a href="../events/">Events</a></li>
-        
-          <li class="active"><a href="../about/">About</a></li>
-        
-      </ul>
-    </nav>
-  </header>
-  <div class="page">
-    
-  <h2>About this Website</h2>
+  <body>
+    <header>
+      <a href="/">
+        <img src="../img/logo-tagline-white.png" alt="Pacific Noiseworks logo" class="logo">
+      </a>
+      <nav>
+        <ul class="nav navbar-nav">
+          <li><a href="../">Welcome</a></li>
+          
+            <li><a href="../blog/">Blog</a></li>
+          
+            <li><a href="../events/">Events</a></li>
+          
+            <li class="active"><a href="../about/">About</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <div class="page">
+      
+  <h1>About</h1>
   <p>Pacific Noiseworks is a music collective bringing the best of chiptunes, hardware, and dance music to Seattle and beyond.</p>
-<p>Get in touch with us through the form below, or emailing <email>. You can also find us on Twitter, Facebook, Instagram, and SoundCloud.</p>
+<p>Get in touch with us through the form below, or emailing us at EMAIL. You can also find us on <a href="https://www.facebook.com/pacnoiseworks/">Facebook</a>, <a href="https://twitter.com/pacnoiseworks/">Twitter</a>, <a href="https://www.instagram.com/pacnoiseworks/">Instagram</a>, and <a href="https://soundcloud.com/pacnoiseworks">SoundCloud</a>.</p>
 
+  <form action="mailto:you@yourdomainhere.com" method="post" enctype="text/plain">
+    <label for="name">Name</label>
+    <br />
+    <input type="text" name="name" id="name" onblur="validateName(name)" />
+    <br />
+    <label for="email">Email</label>
+    <br />
+    <input type="email" name="email" id="email" />
+    <br />
+    <label for="message">Message</label>
+    <br />
+    <input type="textfield" name="message" id="message" required />
+    <br />
+    <input type="submit" value="Submit">
+  </form>
 
-  </div>
+  <script>
+    function validateName(x){
+    //  alert(document.getElementById(x).value);
+    }
+  </script>
 
-  <footer>
-    <p class="copyright">&copy; 2020 Pacific Noiseworks</p>
-    <p class="social">Twitter, Facebook, Instagram</p>
-  </footer>
-</body>
+    </div>
+
+    <footer>
+      <p class="copyright">&copy; 2020 Pacific Noiseworks</p>
+      <p class="social">
+        <a href="https://www.facebook.com/pacnoiseworks/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/pacnoiseworks/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        <a href="https://www.instagram.com/pacnoiseworks/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://soundcloud.com/pacnoiseworks" target="_blank"><i class="fab fa-soundcloud"></i></a>
+      </p>
+    </footer>
+  </body>
+</html>

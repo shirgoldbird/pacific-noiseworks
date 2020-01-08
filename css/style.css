@@ -14,7 +14,7 @@ body {
 header, footer, div.page {
   max-width: 760px;
   margin: 0 auto;
-  background: #9965ffb8;
+  background: #42b3a9b8; /* #9965ffb8; */
   padding: 20px 30px;
 }
 
@@ -68,6 +68,15 @@ a:hover {
   color: #33bbdf;
 }
 
+.social a {
+  color: white;
+  padding: 0 3px;
+}
+
+.social a:hover {
+  color: #33bbdf;
+}
+
 footer {
   color: white;
 }
@@ -88,21 +97,35 @@ header nav ul {
 header nav ul li {
   display: inline;
   margin: 0 8px 0 0;
-  padding: 0;
+  padding: 0 5px;
 }
 
 header a {
   color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+li.active a {
+  text-decoration: underline;
 }
 
 div.page {
-  background: #fffaf3;
+  background: #fbfffb; /* #fffaf3; */
   color: #403c3c;
 }
 
 .events ul {
   list-style: none;
   padding-left: 0;
+}
+
+.event {
+  display: inline;
 }
 
 .meta {
@@ -126,4 +149,39 @@ div.page {
 
 .col {
   flex: 1;
+  margin-bottom: 1em;
+}
+
+input {
+  border: #00BCD4 solid 1px;
+}
+
+#message {
+  height: 100px;
+  width: 300px;
+  max-width: 100%;
+}
+
+@media (max-width: 425px) {
+  .flex-grid {
+    display: block;
+  }
+
+  .event img {
+    max-width: 100%;
+  }
+
+  .logo {
+    max-height: 75px;
+    /* display: inline; */
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  header nav ul li {
+    margin: 0 auto;
+    font-size: .75em;
+  }
 }
