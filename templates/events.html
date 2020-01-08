@@ -1,6 +1,5 @@
 {% extends "layout.html" %}
 {% from "macros/event.html" import render_event %}
-{% from "macros/pagination.html" import render_pagination %}
 {% block title %}Events{% endblock %}
 {% block body %}
 <h1>Events</h1>
@@ -21,10 +20,6 @@
     {% for child in this.children %}
       {% if compare_dates(current_datetime(), child.event_date) %}
         <li>{{ render_event(child, from_index=true) }}</li>
-        {% if loop.last and loop.index >= this.pagination.per_page %}
-          <br />
-          {{ render_pagination(this.pagination) }}
-        {% endif %}
       {% endif %}
     {% endfor %}
     </ul>
