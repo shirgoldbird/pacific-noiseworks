@@ -2,12 +2,12 @@
   <div class="event">
   {% if from_index %}
     {% set image = post.attachments.images.first() %}
+    <div class="event-info">
+      <h3><a href="{{ post|url }}">{{ post.event_date|dateformat('M/d/YYYY') }} - {{ post.title }}</a></h3>
+    </div>
     {% if image %}
       <a href="{{ post|url }}"><img src="{{ image.thumbnail(320, 200, 'crop')|url }}" alt="Header image for {{ post.title }}"></a><br />
     {% endif %}
-    <div class="event-info">
-      <a href="{{ post|url }}">{{ post.title }}</a> ({{ post.event_date|dateformat }})
-    </div>
   </div>
 
   {% else %}
