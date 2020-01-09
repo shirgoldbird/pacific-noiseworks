@@ -17,6 +17,7 @@
   </p>
   {% if from_index %}
     {{ post.body|excerpt }}
+    <i><a href="{{ post|url }}">read more</a></i>
   {% else %}
     {{ post.body }}
   {% endif %}
