@@ -20,6 +20,11 @@
     <i><a href="{{ post|url }}">read more</a></i>
   {% else %}
     {{ post.body }}
+
+    {% if post.flickr %}
+      <h2>Photos</h2>
+      {{ post.flickr }}
+    {% endif %}
   {% endif %}
   </div>
 {% endmacro %}

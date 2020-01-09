@@ -20,4 +20,9 @@
     {% endfor %}
 </div>
 {% endif %}
+
+{% if this.flickr %}
+  <h2>Photos</h2>
+  {{ this.flickr }}
+{% endif %}
 {% endblock %}
