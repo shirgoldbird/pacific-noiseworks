@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 from lektor.pluginsystem import Plugin
 from lektor.types import Type
+import re
+
+def create_responsive_embed(embed_html):
+    return re.sub(r'="([0-9]+)"', '="100%"', embed_html)
 
 # Wrapper with an __html__ method prevents
 # Lektor from escaping HTML tags.
@@ -15,7 +19,7 @@ class FlickrEmbedType(Type):
     widget = 'multiline-text'
 
     def value_from_raw(self, raw):
-        return HTML(raw.value or u'')
+        return HTML(create_responsive_embed(raw.value or u''))
 
 class FlickrEmbedPlugin(Plugin):
     name = 'flickr-embed'
