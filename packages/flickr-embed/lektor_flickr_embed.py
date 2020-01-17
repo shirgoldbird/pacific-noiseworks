@@ -25,11 +25,6 @@ class FlickrEmbedPlugin(Plugin):
     name = 'flickr-embed'
     description = u'Adds Flickr embeds and field type to Lektor.'
 
-    def on_process_template_context(self, context, **extra):
-        def test_function():
-            return 'Value from plugin %s' % self.name
-        context['test_function'] = test_function
-
     def on_setup_env(self, **extra):
         # Derives type name "flickr" from class name.
         self.env.add_type(FlickrEmbedType)
