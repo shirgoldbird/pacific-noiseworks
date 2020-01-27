@@ -5,3 +5,5 @@ author: Nikola
 body: Lorem ipsum.
 ---
 pub_date: 1199-12-01
+---
+flickr: <a data-flickr-embed="true" href="https://www.flickr.com/photos/m_becker/albums/72157699106930515" title="WAV.fest (A Night of Hardware, Chiptune, and Dance Music)"><img src="https://live.staticflickr.com/918/43436880941_82d8caae49_z.jpg" width="640" height="426" alt="WAV.fest (A Night of Hardware, Chiptune, and Dance Music)"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
