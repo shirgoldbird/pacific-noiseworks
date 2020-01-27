@@ -26,22 +26,32 @@
   {% endif %}
 
   <div class="meta">
-    <p class="date">{{ post.event_date|datetimeformat('EEE, MMM d, h a') }}</p>
-    <p class="location">
-      {{ post.location }} -
-      <a href="https://www.google.com/maps/dir/?api=1&destination={{ post.address }}" target="_blank">{{ post.address }}</a>
-    </p>
-    {% if post.price %}
-    <span>{{ post.price }}</span>
-    {% endif %}
-    {% if post.price and post.age_restriction %}
-    -
-    {% endif %}
-    {% if post.age_restriction %}
-    <span>{{ post.age_restriction }}</span>
-    {% endif %}
+    <div class="date">
+      <i class="fas fa-calendar-day"></i>
+      {{ post.event_date|datetimeformat('EEE, MMM d, h a') }}
+    </div>
+    <div class="location">
+      <i class="fas fa-map-marker-alt"></i>
+      <div class="text">
+        {{ post.location }}
+        <br />
+        <a href="https://www.google.com/maps/dir/?api=1&destination={{ post.address }}" target="_blank">{{ post.address }}</a>
+      </div>
+    </div>
+    <div class="info">
+      <i class="fas fa-receipt"></i>
+      {% if post.price %}
+      <span>{{ post.price }}</span>
+      {% endif %}
+      {% if post.price and post.age_restriction %}
+      -
+      {% endif %}
+      {% if post.age_restriction %}
+      <span>{{ post.age_restriction }}</span>
+      {% endif %}
+    </div>
+    <button type="button"><a  href="{{ post.facebook_event }}" target="_blank">RSVP on Facebook</a></button>
   </div>
-  <button type="button"><a  href="{{ post.facebook_event }}" target="_blank">RSVP on Facebook</a></button>
 
   {{ post.body }}
 

@@ -135,7 +135,28 @@ div.page {
 
 .meta {
   font-size: smaller;
-  font-style: italic;
+  color: grey;
+}
+
+.meta div {
+  padding: 2px 0;
+}
+
+.meta button {
+  margin-top: 10px;
+}
+
+.meta button a {
+  text-decoration: none;
+}
+
+.location {
+  display: flex;
+}
+
+.location i {
+  align-self: center;
+  padding-right: 10px;
 }
 
 .copyright {
