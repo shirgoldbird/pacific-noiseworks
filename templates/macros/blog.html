@@ -6,14 +6,13 @@
     <h1>{{ post.title }}</h1>
   {% endif %}
   <p class="meta">
-    by
     {% if post.twitter_handle %}
-      <a href="https://twitter.com/{{ post.twitter_handle
-        }}">{{ post.author or post.twitter_handle }}</a>
-    {% else %}
-      {{ post.author }}
+      by <a href="https://twitter.com/{{ post.twitter_handle
+        }}" target="_blank">@{{ post.twitter_handle }}</a> on
+    {% elif post.author %}
+      by {{ post.author }} on
     {% endif %}
-    on {{ post.pub_date }}
+    {{ post.pub_date }}
   </p>
   {% if from_index %}
     {{ post.body|excerpt }}
