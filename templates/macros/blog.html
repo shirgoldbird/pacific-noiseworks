@@ -39,7 +39,7 @@
     {% if post.soundcloud %}
       <h2>SoundCloud</h2>
       <div class="soundcloud">
-        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="{{ post.soundcloud }}"></iframe>
+        {{ post.soundcloud }}
       </div>
     {% endif %}
 
