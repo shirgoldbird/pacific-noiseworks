@@ -19,7 +19,10 @@ class FlickrEmbedType(Type):
     widget = 'multiline-text'
 
     def value_from_raw(self, raw):
-        return HTML(create_responsive_embed(raw.value or u''))
+        if raw.value:
+            return HTML(create_responsive_embed(raw.value))
+        else:
+            return None
 
 class FlickrEmbedPlugin(Plugin):
     name = u'Flickr Embeds'
