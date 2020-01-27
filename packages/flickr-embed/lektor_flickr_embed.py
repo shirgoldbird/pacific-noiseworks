@@ -22,9 +22,9 @@ class FlickrEmbedType(Type):
         return HTML(create_responsive_embed(raw.value or u''))
 
 class FlickrEmbedPlugin(Plugin):
-    name = 'flickr-embed'
+    name = u'Flickr Embeds'
     description = u'Adds Flickr embeds and field type to Lektor.'
 
     def on_setup_env(self, **extra):
-        # Derives type name "flickr" from class name.
+        # Derives type name "flickrembed" from class name.
         self.env.add_type(FlickrEmbedType)
