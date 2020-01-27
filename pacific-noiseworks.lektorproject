@@ -2,7 +2,7 @@
 name = pacific-noiseworks
 
 [servers.ghpages]
-target = ghpages://shirgoldbird/pacific-noiseworks
+target = ghpages://shirgoldbird/pacific-noiseworks?cname=pacificnoiseworks.com
 
 [packages]
 lektor-markdown-excerpt = 0.1
