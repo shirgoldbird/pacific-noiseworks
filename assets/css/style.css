@@ -159,6 +159,10 @@ div.page {
   padding-right: 10px;
 }
 
+.blog-post img {
+  max-width: 100%;
+}
+
 .copyright {
   display: inline-block;
   align-self: center;
