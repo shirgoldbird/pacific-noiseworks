@@ -150,6 +150,10 @@ div.page {
   text-decoration: none;
 }
 
+.blog-post .meta {
+  margin: 0 0 1em 0;
+}
+
 .location {
   display: flex;
 }
