@@ -1,4 +1,4 @@
-_model: contact
+_model: page
 ---
 title: About
 ---
@@ -6,4 +6,4 @@ body:
 
 Pacific Noiseworks is a music collective bringing the best of chiptunes, hardware, and dance music to Seattle and beyond.
 
-Get in touch with us through the form below, or emailing us at EMAIL. You can also find us on [Facebook](https://www.facebook.com/pacnoiseworks/), [Twitter](https://twitter.com/pacnoiseworks/), [Instagram](https://www.instagram.com/pacnoiseworks/), and [SoundCloud](https://soundcloud.com/pacnoiseworks).
+Get in touch with us by emailing us at [pacificnoiseworks@gmail.com](mailto:pacificnoiseworks@gmail.com). You can also find us on [Facebook](https://www.facebook.com/pacnoiseworks/), [Twitter](https://twitter.com/pacnoiseworks/), [Instagram](https://www.instagram.com/pacnoiseworks/), and [SoundCloud](https://soundcloud.com/pacnoiseworks).
